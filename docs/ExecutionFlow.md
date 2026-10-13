@@ -2240,27 +2240,7 @@ That is the correct scope.
 
 ---
 
-# 39. One-Minute Interview Explanation
-
-If someone asks:
-
-> **"Explain how your planning workflow works."**
-
-You can answer:
-
-> "The execution starts from `main.py`, where the user goal is passed to a planner. The planner can be deterministic or LLM-based using Ollama. It converts the goal into a structured `Plan` containing ordered `PlanStep` objects. Before execution, the plan passes through an application-side validator that checks supported tools, required inputs, data types, step limits and other constraints.
->
-> The validated plan is passed to `WorkflowRunner`, which owns execution control. For every pending step, the runner changes its state to running and passes the step to `ToolExecutor`. The executor uses an allowlisted mapping to dispatch the step to the appropriate business tool, such as `search_products` or `check_inventory`. The tool result becomes the step's observation/result.
->
-> The runner then evaluates that observation. If it is a normal result, execution continues to the next step. If the observation invalidates the current plan—for example, a product is out of stock—the runner transitions the plan to `NEEDS_REPLAN`. It sends the original goal, completed work, observation and reason to the replanner. The replacement plan is validated, completed work is preserved, and the new pending work is executed.
->
-> Replanning is bounded by a maximum replan count and repeated pending-action signatures are detected to prevent infinite loops. Once the workflow completes, `completion.py` evaluates the executed results and selects the best eligible product. Finally, `main.py` formats the application response."
-
-That is a **strong senior/architect-level explanation** of the current implementation.
-
----
-
-# 40. The Mental Model to Freeze
+# 39. The Mental Model to Freeze
 
 Before moving to MCP, I would memorize this:
 
