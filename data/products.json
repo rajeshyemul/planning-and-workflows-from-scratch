@@ -1,0 +1,30 @@
+[
+  {
+    "id": "P1001",
+    "name": "PaceRun Flex",
+    "category": "running_shoes",
+    "price_inr": 4299,
+    "stock_quantity": 12
+  },
+  {
+    "id": "P1002",
+    "name": "RoadRunner Lite",
+    "category": "running_shoes",
+    "price_inr": 4799,
+    "stock_quantity": 0
+  },
+  {
+    "id": "P1003",
+    "name": "TrailSprint Pro",
+    "category": "running_shoes",
+    "price_inr": 6499,
+    "stock_quantity": 5
+  },
+  {
+    "id": "P1004",
+    "name": "Everyday Walker",
+    "category": "walking_shoes",
+    "price_inr": 2999,
+    "stock_quantity": 8
+  }
+]
