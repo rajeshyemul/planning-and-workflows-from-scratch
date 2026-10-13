@@ -1,12 +1,3 @@
-Absolutely. Before moving to MCP, this is worth documenting properly because **Phase 06 is the point where your architecture starts looking like a real workflow engine rather than just an agent loop**.
-
-I reviewed the current implementation of the repository, including the latest replanning changes and the 52-test state. Below is a **repo-ready document** you can save as:
-
-> `docs/ExecutionFlow.md`
-
-I am intentionally explaining the **actual current implementation**, not a generic agent architecture.
-
----
 
 # Execution Flow — Planning and Structured Workflows
 
